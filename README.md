@@ -1,4 +1,4 @@
-# เจช่วยหวาน 60/40 — v1.0.1
+# เจช่วยหวาน 60/40 — v1.0.2
 Static PWA, no dependencies. Money stored as integer satang. Monthly quota is the payer's subsidy, not purchase total. No carryover. Existing transactions retain their actual split; edits to amount or month recompute only that entry against available quota, not other entries. Settings change current month and defaults for future unconfigured months. Historical months with saved config remain unchanged. Local single-device data, no sync or real money transfer.
 
 ## Deploy
@@ -10,3 +10,6 @@ Keep origin, database name `jay-chuay-thai-v1`, and install URL stable. Incremen
 ## Test checklist
 - Fresh month: 1000 baht. Add 500: subsidy 300, user 200, left 700. Add 1200: subsidy capped 700, user 500, left 0.
 - Edit/delete and verify totals; existing other transactions unchanged. History month switch. Change each theme and reload. Backup, reset, restore; malformed JSON rejected. Test offline after SW activation, on real iOS and Android. Test upgrade with existing data.
+
+
+Known update note: if an installed PWA or browser tab still shows old branding, fully close the app, reopen once online, or reinstall the PWA after backup; old service-worker caches from previous versions may delay visible updates until the new worker activates.
