@@ -1,4 +1,4 @@
-# เจช่วยหวาน 60/40 — v1.0.2
+# เจช่วยหวาน 60/40 — v1.1.0
 Static PWA, no dependencies. Money stored as integer satang. Monthly quota is the payer's subsidy, not purchase total. No carryover. Existing transactions retain their actual split; edits to amount or month recompute only that entry against available quota, not other entries. Settings change current month and defaults for future unconfigured months. Historical months with saved config remain unchanged. Local single-device data, no sync or real money transfer.
 
 ## Deploy
@@ -13,3 +13,6 @@ Keep origin, database name `jay-chuay-thai-v1`, and install URL stable. Incremen
 
 
 Known update note: if an installed PWA or browser tab still shows old branding, fully close the app, reopen once online, or reinstall the PWA after backup; old service-worker caches from previous versions may delay visible updates until the new worker activates.
+
+## Personalization v1.1.0
+Three theme-specific icons and manifests. All manifests resolve to the same app ID, start URL and scope. Theme selection persists per device. Favicon, apple-touch-icon and manifest references update immediately; installed launcher icons are controlled by the browser/OS and may not update without reinstalling. Back up before removing an installed app; do not clear site data. No cloud sync in this release.
