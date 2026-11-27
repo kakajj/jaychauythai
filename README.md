@@ -1,4 +1,4 @@
-# เจช่วยไทย 60/40 — v1.0.0
+# เจช่วยหวาน 60/40 — v1.0.1
 Static PWA, no dependencies. Money stored as integer satang. Monthly quota is the payer's subsidy, not purchase total. No carryover. Existing transactions retain their actual split; edits to amount or month recompute only that entry against available quota, not other entries. Settings change current month and defaults for future unconfigured months. Historical months with saved config remain unchanged. Local single-device data, no sync or real money transfer.
 
 ## Deploy
