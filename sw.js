@@ -1,4 +1,4 @@
-const CACHE='jay-chuay-wan-1.1.0';
+const CACHE='jay-chuay-wan-1.1.1';
 const FILES=["./", "./index.html", "./style.css", "./app.js", "./db.js", "./logic.js", "./theme.js", "./manifest.webmanifest", "./icons/icon-192.png", "./icons/icon-512.png", "./manifests/pink.webmanifest", "./manifests/yellow.webmanifest", "./manifests/blue.webmanifest", "./icons/pink/icon-192.png", "./icons/pink/icon-512.png", "./icons/yellow/icon-192.png", "./icons/yellow/icon-512.png", "./icons/blue/icon-192.png", "./icons/blue/icon-512.png"];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES.map(url=>new Request(url,{cache:"reload"})))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil((async()=>{
